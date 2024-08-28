@@ -1,15 +1,25 @@
-.shadows-into-light-regular {
-    font-family: "Shadows Into Light", cursive;
-    font-weight: 100;
+@font-face {
+    font-family: 'pp_neue_machinainktrapultraBd';
+    src: url('ppneuemachina-inktrapultrabold-webfont.woff2') format('woff2'),
+         url('ppneuemachina-inktrapultrabold-webfont.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
-    
-  }
-  
+
+}
+@font-face {
+    font-family: 'pp_neue_machinainktrap_light';
+    src: url('ppneuemachina-inktraplight-webfont.woff2') format('woff2'),
+         url('ppneuemachina-inktraplight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 *{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    font-family: pp_neue_machinaplain_regular;
+    font-family: pp_neue_machinainktrapultraBd;
 }
 html,body{
     height: 100%;
@@ -23,7 +33,7 @@ html,body{
     position: relative;
     height: 100vh;
     width: 100vw;
-    background-color: rgb(13, 13, 13);
+    background-color: #fff;
 }
 #page>img{
     position: absolute;
@@ -35,25 +45,16 @@ html,body{
 #page>#nav{
     display: flex;
     align-items: center;
-    position: fixed;
     justify-content: space-between;
-    padding: 0px 120px;
+    padding: 0px 30px;
+    position: absolute;
     z-index: 9;
     height: 10%;
     width: 100%;
-    background: rgba(0 , 0, 0, .1);
-    backdrop-filter: blur(10px);
 }
-#nav>img{
-    width: 75px;
-}
-
 #center-nav{
     display: flex;
     gap: 20px;
-}
-#center-nav>a {
-    color: white;
 }
 #center-nav>a{
     text-decoration: none;
@@ -72,13 +73,14 @@ html,body{
     position: relative;
     top: 18%;
     left: 8%;
-    height: 80%;
-    width: 80%;
+    height: 75%;
+    width: 35%;
+    scale: 1.1;
 }
 #text>h1{
     font-size: 60px;
     line-height: 1;
-    color: white;
+    margin-top: 20px;
 }
 #text>h4{
     margin-top: 30px;
@@ -87,12 +89,10 @@ html,body{
     font-weight: 500;
 }
 #text>h5{
-    font-family: Shadows Into Light;
-    letter-spacing: 1.5px;
     color: #8873EF;
     transform: rotate(-20deg);
     position: absolute;
-    left: 5%;
+    left: 3%;
 }
 #buttons{
     position: absolute;
