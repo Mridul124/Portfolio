@@ -1,3 +1,32 @@
+.blur-circle {
+    position: absolute;
+    width: 400px;
+    background: #0ff; /* Bright color for the glow */
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.8; /* Adjust opacity for subtlety */
+    z-index: 2; /* Place behind the content */
+}
+.text-gradient {
+    background: linear-gradient(90deg, #ff6b6b, #24c82c, #2549ff);
+    background-size: 800%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 2s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .shadows-into-light-regular {
     font-family: "Shadows Into Light", cursive;
     font-weight: 100;
@@ -10,10 +39,14 @@
     padding: 0%;
     box-sizing: border-box;
     font-family: pp_neue_machinaplain_regular;
+    font-variant-ligatures: none;
 }
 html,body{
     height: 100%;
     width: 100%;
+    position: relative;
+    scroll-behavior: smooth;
+    
 }
 #main{
     position: relative;
@@ -23,9 +56,10 @@ html,body{
     position: relative;
     height: 100vh;
     width: 100vw;
-    background-color: rgb(13, 13, 13);
-    align-items: center;
-    justify-content: center;
+    background-image: url(Slide\ 16_9\ -\ 1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 #page>img{
     position: absolute;
@@ -47,7 +81,7 @@ html,body{
     backdrop-filter: blur(10px);
 }
 #nav>img{
-    width: 75px;
+    width: 50px;
 }
 
 #center-nav{
@@ -69,11 +103,17 @@ html,body{
     border: 1px solid #dadada;
     text-transform: uppercase;
 }
+#icons>a {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+}
 #text{
     display: flex;
     flex-direction: column;
     width: 800px;
     height: 300px;
+    padding-top: 45px;
     position: absolute;
     top:0;
     bottom: 0;
@@ -114,73 +154,139 @@ html,body{
     position: relative;
     height: 100vh;
     width: 100vw;
-    background-color: #FCDA69;
+    background-image: url(Slide\ 16_9\ -\ 2.png);
+    background-repeat: nocover;
+    background-size: cover;
 }
-#page1>#left{
-    position: absolute;
-    right: 5%;
-    height: 90%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 35%;
-}
-#left>.box{
+#divide_page1{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 20px;
-    height: 33.3%;
+    height: 100%;
     width: 100%;
-    border-top: 2px solid #000;
 }
-#left>.box>h4{
-    font-size: 30px;
-}
-#left>.box>h1{
-    font-size: 50px;
-}
-.circle{
+#left{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 3vw;
-    width: 3vw;
-    background-color: #8873EF;
-    border-radius: 50%;
-}
-.circle>i{
-    color: #fff;
-    font-size: 25px;
-}
-#text1{
-    margin: 50px 50px;
-    height: 30%;
+    flex-direction: column;
+    gap: 10px;
     width: 50%;
-    position: absolute;
-    z-index: 9;
 }
-#text1>h1{
-    font-size: 70px;
-    margin-top: 20px;
+#left>button_row1,button_row2{
+    align-items: center;
 }
-#text1>h4{
-    font-size: 17px;
-    color: #2b2b2b;
-    font-weight: 500;
-    width: 70%;
-    margin-top: 20px;
+#button_row1{
+    display: flex;
+    gap: 5px;
+    height: 40px;
+    justify-content: center;
 }
-#text1>h5{
-    color: #8873EF;
-    transform: rotate(-20deg);
-    position: absolute;
-    left: -2%;
+#button_row1>button {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 7px;
+    border: none;
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0 25px 45px rgba(0 , 0, 0, .2);
+    border: .1px solid rgba(255, 255, 255, .3);
+    border-right: .1px solid rgba(255, 255, 255, .2);
+    border-bottom: .1px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: 20px;
 }
-#page1>img{
-    position: absolute;
-    bottom: 5%;
-    left: 5%;
-    width: 10%;
+#button_row2{
+    display: flex;
+    gap: 5px;
+    height: 40px;
+    justify-content: center;
+}
+#button_row2>button{
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 7px;
+    border: none;
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0 25px 45px rgba(0 , 0, 0, .2);
+    border: .1px solid rgba(255, 255, 255, .3);
+    border-right: .1px solid rgba(255, 255, 255, .2);
+    border-bottom: .1px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: 20px;
+}
+#tools_heading{
+    color: white;
+    text-align: left;
+    margin-top: 30px;
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+#button_row3{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+#button_row3>button{
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 7px;
+    border: none;
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0 25px 45px rgba(0 , 0, 0, .2);
+    border: .1px solid rgba(255, 255, 255, .3);
+    border-right: .1px solid rgba(255, 255, 255, .2);
+    border-bottom: .1px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    color: white;
+    height: 60px;
+    width: 60px;
+}
+#button_row4 {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+#button_row4>button {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 7px;
+    border: none;
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0 25px 45px rgba(0 , 0, 0, .2);
+    border: .1px solid rgba(255, 255, 255, .3);
+    border-right: .1px solid rgba(255, 255, 255, .2);
+    border-bottom: .1px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    color: white;
+    height: 60px;
+    width: 60px;
+}
+#qualifications {
+    color: white;
+    text-align: left;
+    margin-top: 30px;
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+#button_row5{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+#button_row5>button {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 7px;
+    border: none;
+    background: rgba(243, 242, 242, 0.1);
+    box-shadow: 0 25px 45px rgba(0 , 0, 0, .2);
+    border: .1px solid rgba(255, 255, 255, .3);
+    border-right: .1px solid rgba(255, 255, 255, .2);
+    border-bottom: .1px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    color: white;
+    height: 90px;
+    width: 80px;
 }
 #page2{
     position: relative;
