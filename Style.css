@@ -441,6 +441,9 @@ html,body{
     height: 30%;
     width: 100%;
 }
+#text3>h1{
+    color: white;
+}
 #text4>h1{
     color: white;
 }
