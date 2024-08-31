@@ -1,17 +1,31 @@
 
-/* Media Queries for Mobile Devices */
-
-/* General Mobile Adjustments */
+.device-warning {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #ffcc00;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+} 
 @media (max-width: 768px) {
     /* Navigation */
+    .device-warning {
+        display: block;
+    }
     #nav {
-        flex-direction: column;
-        padding: 10px 20px;
-        height: auto;
+        flex-direction: row;
+        padding: 10px;
+        gap: 15px;
+        
     }
 
     #center-nav {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         gap: 10px;
     }
@@ -21,8 +35,9 @@
     }
 
     #icons {
-        margin-top: 10px;
+        display: none;
     }
+    
 
     /* Text Section */
     #text {
@@ -53,10 +68,11 @@
         width: 100%;
         padding: 10px;
     }
-
-    #left > button_row1, #left > button_row2 {
-        flex-direction: column;
+    #button_row5{
+        display: flex;
     }
+
+  
 
     /* Page 2 Adjustments */
     #divide_pagev2 {
