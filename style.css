@@ -221,6 +221,7 @@ p {
     background-size: cover;
 	color: white;
     height: 90vh;
+    padding-top: 80px;
 }
 
 #about {
