@@ -318,6 +318,32 @@ p {
         align-items: center;
         justify-content: center;
     }
-    
-    
+    .col-md-6 .row{
+        margin-top: 50px;
+        
+    }
+    #projects .container .text-left{
+        padding-top: 50px;
+    }
+    .row{
+        margin-top: 50px;
+    }
+    .change h2{
+        text-align: left;
+        padding-top: 20px;
+    }
+    .row .col2{
+        margin: 0;
+        padding: 0;
+    }
+    #contact{
+        padding: 0px 0px;
+    }
+    #portfolio {
+        padding: 0px 0px;
+    }
+    .row .border-top-row{
+        margin-top: 35px;
+    }
+   
 }
