@@ -267,8 +267,8 @@ p {
     margin-left: 10px;
 	color: #ffffff
 }
-#home .container h1{
-    padding-top: 100px;
+#home .container{
+    align-items: center;
 }
 
 
