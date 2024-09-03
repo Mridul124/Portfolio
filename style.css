@@ -274,6 +274,7 @@ p {
 .col-12 {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 
