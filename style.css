@@ -157,6 +157,9 @@ body {
     padding: 20px; /* Space inside the border */
     text-align: center; /* Center the content inside each div */
 }
+.border-top-div a{
+    text-decoration: none;
+}
 
 .border-top-div img {
     max-width: 100%; /* Make sure images are responsive */
@@ -264,6 +267,9 @@ p {
     margin-left: 10px;
 	color: #ffffff
 }
+#home .container h1{
+    padding-top: 100px;
+}
 
 
 
@@ -312,5 +318,6 @@ p {
         align-items: center;
         justify-content: center;
     }
+    
     
 }
