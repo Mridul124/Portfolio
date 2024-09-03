@@ -345,5 +345,8 @@ p {
     .row .border-top-row{
         margin-top: 35px;
     }
-   
+   #about{
+    padding: 0;
+   }
+
 }
