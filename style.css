@@ -42,6 +42,7 @@ body {
     text-align: center;
 }
 
+
 .button-group {
     display: flex;
     gap: 5px;
@@ -109,8 +110,8 @@ body {
 }
 
 .border-top-section {
-    border-top: 2px solid #fff; /* Adjust the color as needed */
-    padding: 10px; /* Space inside the border */
+    border-top: 2px solid #fff;
+    padding: 10px; 
     margin-bottom: 20px;
 	display: flex;
 	height:170px;
@@ -120,7 +121,7 @@ body {
 }
 
 .circle-list {
-    list-style-type: circle; /* Circle shape for list items */
+    list-style-type: circle; 
 	text-align: left;
 	line-height:1.2;
 	white-space: nowrap;
@@ -129,7 +130,7 @@ body {
 }
 
 .circle-list li {
-    margin-bottom: 10px; /* Space between list items */
+    margin-bottom: 10px; 
 }
 .change h2{
 	margin-left:20px; 
@@ -149,21 +150,20 @@ body {
 }
 
 .project-div {
-    margin-bottom: 20px; /* Space below each project div */
+    margin-bottom: 20px;
 }
 
 .border-top-div {
-    border-top: 2px solid #fff; /* Adjust the color as needed */
-    padding: 20px; /* Space inside the border */
-    text-align: center; /* Center the content inside each div */
+    border-top: 2px solid #fff; 
+    padding: 20px; 
+    text-align: center; 
 }
 .border-top-div a{
     text-decoration: none;
 }
 
 .border-top-div img {
-    max-width: 100%; /* Make sure images are responsive */
-    height: auto; /* Maintain image aspect ratio */
+    max-width: 100%;
     margin-bottom: 15px;
 	border-radius: 10px;
 }
@@ -178,7 +178,7 @@ body {
 }
 .text-left {
     text-align: left;
-    margin-bottom: 20px; /* Space below the headings */
+    margin-bottom: 20px; 
 }
 
 
@@ -188,12 +188,12 @@ h1 {
 }
 
 p {
-    margin: 10px 0; /* Space between paragraphs */
+    margin: 10px 0; 
 }
 
 .img-fluid {
-    max-width: 100%;
-    height: auto; /* Ensure the image is responsive */
+    width: 350px;;
+    height: auto; 
 }
 
 .container h1{
@@ -244,6 +244,7 @@ p {
 #portfolio {
 	background-image: url('Slide 16_9 - 4.png');
     background-size: cover;
+    padding-bottom: 0;
 }
 
 .navbar-nav .nav-item{
@@ -270,7 +271,10 @@ p {
 #home .container{
     align-items: center;
 }
-
+.col-12 {
+    display: flex;
+    justify-content: space-between;
+}
 
 
 @media (max-width: 992px) {
